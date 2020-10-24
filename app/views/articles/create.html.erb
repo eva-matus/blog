@@ -1,0 +1,9 @@
+<% if @article.errors.any?  %>
+    <h2>Tu post no ha sido creado debido a que tiene <%= pluralize(@article.errors.count, "errores") %></h2>
+    <% @article.errors.full_messages.each do |m| %>
+        <%= m %>
+
+    <% end %>
+    <% else  %>
+    <%= link_to  "crear otro post", root_path %>
+<% end %>
