@@ -3,7 +3,7 @@ class Article < ApplicationRecord
     before_save :censore
 
 def censore
-    self.content = self.content.split([]) {|contenido, value| contenido.push(value) if value != "latam"; contenido}.join ("")
+    self.content = self.content.split.reduce([]) {|contenido, value| contenido.push(value) if value != "bueno"; contenido}.join ("")
     
 end
 

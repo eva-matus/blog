@@ -2,7 +2,7 @@
 <% @articles.each do |a| %>
     <li><%= a.title  %></li>
     <li><%= a.content%></li>
-    <li><%= image_tag_url a.image_url %></li>
+    <li><%= a.image_url %></li>
     <li><%= a.created_at.strftime("%FT%T") %> </li> 
 
 <% end %>
